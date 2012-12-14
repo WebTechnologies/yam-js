@@ -117,7 +117,9 @@ define("app/ModelList", ["app/Observable","app/ModelList"], function () {
              *
              */
             last: function() {
-                return this._collection[ this._collection.length - 1 ];
+
+                return this._collection.length > 0 ? this._collection[ this._collection.length - 1 ] : null ;
+
             },
 
             /**
